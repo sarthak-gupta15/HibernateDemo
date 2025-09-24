@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.url">jdbc:postgresql://localhost:5432/bank_mis_bb</property>
+        <property name="hibernate.connection.username">postgres</property>
+        <property name="hibernate.connection.password">postgres</property>
+
+        <!-- JDBC connection pool -->
+        <property name="hibernate.connection.pool_size">5</property>
+
+        <!-- SQL dialect for PostgreSQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQLDialect</property>
+
+        <!-- Show executed SQL in console -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Automatically create/update schema (use validate/update/create-drop as needed) -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mapping entity classes -->
+<!--        <mapping class="com.binarybrain.model.Student"/>-->
+    </session-factory>
+</hibernate-configuration>
